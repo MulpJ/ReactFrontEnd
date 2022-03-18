@@ -1,10 +1,11 @@
 import './App.scss'
 import React from 'react'
+import { LoginPage } from './components/LoginPage'
 
 function App() {
   return (
     <>
-      <h1>Test</h1>
+      <LoginPage/>
     </>
   )
 }

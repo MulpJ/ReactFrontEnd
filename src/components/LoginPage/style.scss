@@ -1,0 +1,83 @@
+@import '../../Sass/variables';
+
+body {
+  background-color: $primaryColor;
+}
+
+.box {
+  background-color: #ffffffc5;
+  width: 50vw;
+  max-width: 250px;
+  max-height: 300px;
+  height: 46vh;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 15vh auto;
+  box-shadow: 0px 0px 20px $secondaryColor;
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: $bigFont;
+    text-align: center;
+  }
+
+  label {
+    margin-left: 13px;
+    font-weight: $smallFont;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 15px;
+    width: 90%;
+    border: none;
+    display: block;
+    background-color: #ffffffa2;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.212);
+    margin-bottom: 10px;
+    transition: 1s;
+
+    &:hover {
+      transition: 1s;
+      background-color: #fff;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
+    }
+  }
+
+  .showpass {
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      top: 53%;
+      left: 85%;
+      width: 20px;
+    }
+  }
+
+  button {
+    background-color: $primaryColor;
+    color:$secondaryColor;
+    padding: 7px;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: none;
+    font-weight: $bigFont;
+    font-size: 1.2em;
+  }
+
+  .op {
+    display: flex;
+    font-size: 0.7em;
+    font-weight: $smallFont;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+
