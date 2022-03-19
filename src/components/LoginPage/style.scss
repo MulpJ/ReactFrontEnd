@@ -4,6 +4,10 @@ body {
   background-color: $primaryColor;
 }
 
+.all {
+  margin-top: 14vh;
+}
+
 .box {
   background-color: #ffffffc5;
   width: 50vw;
@@ -12,7 +16,7 @@ body {
   height: 46vh;
   border-radius: 30px;
   padding: 20px;
-  margin: 15vh auto;
+  margin: 30px auto;
   box-shadow: 0px 0px 20px $secondaryColor;
 
   h1 {
@@ -28,6 +32,7 @@ body {
   }
 
   input {
+    text-align: center;
     padding: 10px;
     border-radius: 15px;
     width: 90%;
@@ -55,6 +60,8 @@ body {
       left: 85%;
       width: 20px;
     }
+
+  
   }
 
   button {
@@ -71,7 +78,7 @@ body {
 
   .op {
     display: flex;
-    font-size: 0.7em;
+    font-size: 0.6em;
     font-weight: $smallFont;
     justify-content: space-between;
     margin-right: 10px;
@@ -80,4 +87,44 @@ body {
 }
 
 
+.error {
+  color: red;
+}
 
+.sucess {
+  color: green;
+}
+
+#res {
+  width: 50vw;
+  position: absolute;
+  max-width: 300px;
+  text-align: center;
+  background-color: $secondaryColor;
+  padding: 20px;
+  top: 3%;
+  left: -100vw;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px $secondaryColor;
+  font-weight: $bigFont;
+} 
+
+.play {
+  animation: pop 0.5s forwards;
+}
+
+.logo {
+  display: block;
+  width: 7%;
+  max-width: 50px;
+  margin: auto;
+}
+
+@keyframes pop {
+  0% {
+    left: -70%;
+  }
+  100% {
+    left: 3%;
+  }
+}
