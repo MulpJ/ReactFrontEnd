@@ -74,15 +74,26 @@ body {
     border: none;
     font-weight: $bigFont;
     font-size: 1.2em;
+    transition: 1s;
+      &:hover {
+        transition: 1s;
+        background-color: $secondaryColor;
+        color:$primaryColor; 
+      } 
   }
 
   .op {
     display: flex;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-weight: $smallFont;
     justify-content: space-between;
     margin-right: 10px;
     margin-left: 10px;
+    margin-top:4px;
+    a {
+      text-decoration: none;
+      color: $primaryColor;
+    }
   }
 }
 

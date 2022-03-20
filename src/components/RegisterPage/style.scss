@@ -1,0 +1,178 @@
+@import '../../Sass/variables';
+
+.Resbox {
+  background-color: #ffffffc5;
+  width: 70vw;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 4% auto;
+
+  .logoimg {
+    img {
+      width: 200%;
+      max-width: 500px;
+    }
+  }
+
+  .register {
+    margin: auto;
+    
+    h1 {
+      text-align: center;
+    }
+    margin-right: 20px;
+    width: 500px;
+    height: 100%;
+
+    label {
+      margin-left: 55px;
+      font-weight: $smallFont;
+    }
+
+    input {
+      margin: auto;
+      text-align: center;
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      width: 80%;
+      border: none;
+      display: block;
+      background-color: #ffffffa2;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.548);
+      margin-bottom: 10px;
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
+      }
+    }
+
+    .showpass {
+      position: relative;
+  
+      img {
+        position: absolute;
+        bottom: 0;
+        top: 53%;
+        left: 85%;
+        width: 20px;
+      }
+  
+    
+    }
+
+    button {
+      display: block;
+      margin: auto;
+      padding: 10px;
+      width: 85%;
+      margin-top: 20px;
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      font-weight: $bigFont;
+      border: none;
+      border-radius: 15px;
+      font-size: 1em;
+      transition: 1s;
+      &:hover {
+        transition: 1s;
+        background-color: $secondaryColor;
+        color:$primaryColor; 
+      } 
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: $primaryColor;
+  }
+
+
+}
+
+@media only screen and (max-width: 1085px) {
+  .Resbox {
+    width: 52vw;
+    height: 57vh;
+    max-height: 400px;
+    max-width: 700px;
+    margin: 10vh auto;
+    .logoimg {
+      display: none;
+    }
+    .register {
+      font-size: 0.9em;
+      margin: auto;
+
+      label {
+        margin-left: 12%;
+        font-weight: $smallFont;
+      }
+      .showpass {
+        position: relative;
+    
+        img {
+          position: absolute;
+          bottom: 0;
+          top: 53%;
+          left: 40vw;
+          width: 20px;
+        }
+    
+      
+      }
+    }
+  }
+}
+
+.error {
+  color: red;
+}
+
+.sucess {
+  color: green;
+}
+
+#res {
+  width: 50vw;
+  position: absolute;
+  max-width: 300px;
+  text-align: center;
+  background-color: $secondaryColor;
+  padding: 20px;
+  top: 3%;
+  left: -100vw;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px $secondaryColor;
+  font-weight: $bigFont;
+} 
+
+.play {
+  animation: pop 0.5s forwards;
+}
+
+.logo {
+  display: block;
+  width: 7%;
+  max-width: 50px;
+  margin: auto;
+}
+
+@keyframes pop {
+  0% {
+    left: -70%;
+  }
+  100% {
+    left: 3%;
+  }
+}

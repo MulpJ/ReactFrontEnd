@@ -1,12 +1,19 @@
 import './App.scss'
 import React from 'react'
+import { BrowserRouter , Routes ,Route } from 'react-router-dom';
+
+// * Components
 import { LoginPage } from './components/LoginPage'
+import { RegisterPage } from './components/RegisterPage';
 
 function App() {
   return (
-    <>
-      <LoginPage/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

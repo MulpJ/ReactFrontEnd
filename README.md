@@ -1,10 +1,10 @@
 # **Telas front-End!😋**
 
 - [ ] Home Page **(JÃO)**
-- [ ] Tela de Cadastro **(DIAS)**
-    - [ ] Responsividade
-- [ ] Tela de Login **(DIAS)**
-    - [ ] Responsividade
+- [x] Tela de Cadastro **(DIAS)**
+    - [x] Responsividade
+- [x] Tela de Login **(DIAS)**
+    - [x] Responsividade
 - [ ] Recuperar senha **(DIAS)**
     - [ ] Responsividade
 - [ ] Tela Principal **(JÃO)**

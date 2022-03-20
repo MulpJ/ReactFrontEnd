@@ -3,6 +3,7 @@ import iconShow from '../../assets/iconShow.png'
 import './style.scss'
 import axios from 'axios'
 import logo from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 
 export function LoginPage() {
 
@@ -15,7 +16,7 @@ export function LoginPage() {
     }
   }
 
- async function api(evt) {
+  async function api(evt) {
     evt.preventDefault();
 
     const email = document.getElementById('email').value
@@ -77,7 +78,7 @@ export function LoginPage() {
               
               <button type="submit" >Logar</button>
               <div className='op'>
-                <p>Não tem cadastro?</p>
+              <p><Link to="/register">Não tem Cadastro?</Link></p>
                 <p>Esqueci a senha!</p>
               </div>
             </form>
