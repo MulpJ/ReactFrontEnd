@@ -1,0 +1,36 @@
+@import '../../Sass/variables';
+
+.notFoundContainer {
+  display: flex;
+  background-image: linear-gradient(125deg, rgb(0, 0, 0), rgb(31, 31, 31), rgb(68, 68, 68), rgb(107, 107, 107));
+  background-size: 400%;
+  animation: bg 10s infinite;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  color:white;
+  h1{
+    font-size: 10em;
+  }
+
+  p {
+    font-weight: $smallFont;
+  }
+}
+
+@keyframes bg {
+  0% {
+    background-position: 0% 50%; 
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%; 
+  }
+}

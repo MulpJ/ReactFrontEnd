@@ -5,6 +5,8 @@ import { BrowserRouter , Routes ,Route } from 'react-router-dom';
 // * Components
 import { LoginPage } from './components/LoginPage'
 import { RegisterPage } from './components/RegisterPage';
+import { RecoveryPass } from './components/RecoveryPass';
+import { NotFound } from './components/NotFound';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/register" element={<RegisterPage/>}/>
+        <Route path="/recovery" element={<RecoveryPass/>}/>
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   )

@@ -5,7 +5,18 @@ body {
 }
 
 .all {
-  margin-top: 14vh;
+  img {
+    width: 100%;
+  }
+}
+
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .box {
@@ -13,7 +24,7 @@ body {
   width: 50vw;
   max-width: 250px;
   max-height: 300px;
-  height: 46vh;
+  height: 50vh;
   border-radius: 30px;
   padding: 20px;
   margin: 30px auto;

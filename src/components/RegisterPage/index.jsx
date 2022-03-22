@@ -82,7 +82,7 @@ export function RegisterPage() {
       res.classList.add('sucess')
       res.classList.add('play')
       res.innerHTML = "Cadastrado com sucesso, redirecionando..."
-      setTimeout(() => { window.location = '/login' }, 5000);
+      setTimeout(() => { window.location = '/login' }, 3000);
     }
   }
   }
@@ -102,7 +102,6 @@ export function RegisterPage() {
         <div className="register">
           <form id="form">
             <h1>Cadastro</h1>
-            
             <label htmlFor="name">Nome</label>
             <input type="text" required id='name'/>
 
