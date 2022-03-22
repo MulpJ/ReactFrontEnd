@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import { Link } from "react-router-dom";
 import './style.scss'
-
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logoForRegister.png'
 import iconShow from '../../assets/iconShow.png'
 
 export function RegisterPage() {
- 
-
+  const n = useNavigate()
   function showpass() {
     const pass = document.getElementById('password')
     if(pass.type == 'password') {
@@ -30,6 +29,7 @@ export function RegisterPage() {
   async function api(evt) {
     evt.preventDefault();
     const res = document.getElementById('res')
+   
 
     res.classList.remove('play')
     res.innerHTML = ''
@@ -91,9 +91,17 @@ export function RegisterPage() {
   window.addEventListener("load", () => {
     document.getElementById('form').addEventListener('submit', api)
   })
+  
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(token) n('/home');
+  })
 
   return (
+    
     <div className="ResContainer">
+      
       <div id="res"></div>
       <div className="Resbox">
         <div className="logoimg">

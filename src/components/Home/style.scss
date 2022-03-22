@@ -1,0 +1,69 @@
+.top {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  .head {
+    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    // TODOS OS INPUTS
+    .g {
+      z-index: 1;
+      margin: 25px 10px;
+    }
+
+    .uu {
+        
+      width: 14%;
+    }
+
+    .oo {
+      width: 13%;
+      cursor: pointer;
+    }
+
+    .pp {
+      width: 16%;
+      cursor: pointer;
+    }
+    // -------------------
+
+    .search {
+        border-radius: 2px;
+        height: 4vh;
+        width: 100vw;
+        text-align: center;
+        transition: 1s;
+
+    }
+    .sear {
+        transition: 1s;
+        display: none;
+    }
+  }
+  .corp{
+    width: 90%;
+      .view{
+        h2 {
+            color: white;
+        }
+        .most {
+          display:flex;
+             
+          img {
+            width: 12%;
+            border-radius: 15px;
+            margin:0.3%;
+          }
+          }
+        }
+          
+      }
+  }

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto:wght@300;400&display=swap');
+
+
+.header {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+.loo {
+  z-index: 1;
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  left: 30px
+}
+.fundo {
+    height: 100vh;
+    width: 100vw;
+}
+
+.header h1 {
+    z-index: 1;
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    top: 140px;
+    left: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 60px;
+    line-height: 60px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+.nome {
+    z-index: 1;
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-size: 41.6633px;
+    color: #FFFFFF
+
+}
+.lon {
+     z-index: 1;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: solid 1px white;
+    padding: 8px 40px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    text-decoration: none;
+}
+.se {
+    z-index: 1;
+    border: solid 1px white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 25px;
+    padding: 10px 80px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top: 570px;
+    left: 200px;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+   
+
+}
+
+.background {
+  display: flex;
+    width: 100%;
+    height: 100%;
+   
+}
+ma {
+    width: 100vw;
+    height: 100vh;
+   
+}
