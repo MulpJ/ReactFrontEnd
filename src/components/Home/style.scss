@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-
+  
   .head {
     
     width: 30%;
@@ -38,7 +37,6 @@
     .search {
         border-radius: 2px;
         height: 4vh;
-        width: 100vw;
         text-align: center;
         transition: 1s;
 
@@ -51,18 +49,11 @@
   .corp{
     width: 90%;
       .view{
+        
         h2 {
             color: white;
         }
-        .most {
-          display:flex;
-             
-          img {
-            width: 12%;
-            border-radius: 15px;
-            margin:0.3%;
-          }
-          }
+        
         }
           
       }

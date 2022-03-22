@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter , Routes ,Route } from 'react-router-dom';
+import { BrowserRouter , Routes ,Route, useParams } from 'react-router-dom';
 // * Components
 import { LoginPage } from '../components/LoginPage'
 import { RegisterPage } from '../components/RegisterPage';
@@ -17,6 +17,13 @@ export function Rotas() {
           <Route path="/register" element={<RegisterPage/>}/>
           <Route path="/recovery" element={<RecoveryPass/>}/>
           <Route path="/home" element={<Home/>} />
+          <Route path="/play/:movie" element={() => {
+            const movie = useParams()
+
+           
+              console.log(movie)
+
+          }}/>
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

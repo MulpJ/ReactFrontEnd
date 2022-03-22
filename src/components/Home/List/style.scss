@@ -1,0 +1,26 @@
+.most {
+    display:flex;
+      overflow-x: scroll;
+      margin: 10px;
+      &::-webkit-scrollbar {
+        background-color: rgb(48, 48, 48);
+        border-radius: 40px;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(71, 71, 71);
+        border-radius: 40px;
+      }
+    a{
+        margin: 20px;
+        img {
+            border-radius: 15px;
+        
+        }
+      
+    }
+}
