@@ -10,7 +10,7 @@ export function List(parms) {
             <div className="most">
                 {parms.var.map((filme) => {
                     return (
-                        <Link to={`/play/${filme.id}`}> <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} /> </Link>  
+                        <Link to={`/play/${filme.title}`}> <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} /> </Link>  
                     )
                 })} 
             </div>

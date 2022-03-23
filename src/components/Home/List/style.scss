@@ -1,9 +1,10 @@
 .most {
     display:flex;
       overflow-x: scroll;
-      margin: 10px;
+      margin-bottom: 40px;
+      
       &::-webkit-scrollbar {
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(48, 48, 48,0.2);
         border-radius: 40px;
       }
 
@@ -12,13 +13,17 @@
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: rgb(71, 71, 71);
+        background-color: rgb(71, 71, 71,0.2);
         border-radius: 40px;
       }
     a{
-        margin: 20px;
+   
         img {
-            border-radius: 15px;
+         
+           border-radius: 30px;
+           width: 15vw;
+           margin: 3px;
+        
         
         }
       

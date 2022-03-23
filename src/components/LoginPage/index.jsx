@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import iconShow from "../../assets/iconShow.png";
 import "./style.scss";
-import axios from "axios";
+import {axios} from "../../axios/api.jsx"
 import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';

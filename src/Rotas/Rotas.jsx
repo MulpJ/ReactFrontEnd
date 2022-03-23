@@ -7,6 +7,7 @@ import { RecoveryPass } from '../components/RecoveryPass';
 import { NotFound } from '../components/NotFound';
 import { HomePage } from '../components/HomePage/Home.jsx'
 import { Home } from '../components/Home'
+import { Play } from '../components/Play';
 
 export function Rotas() {
     return (
@@ -17,13 +18,7 @@ export function Rotas() {
           <Route path="/register" element={<RegisterPage/>}/>
           <Route path="/recovery" element={<RecoveryPass/>}/>
           <Route path="/home" element={<Home/>} />
-          <Route path="/play/:movie" element={() => {
-            const movie = useParams()
-
-           
-              console.log(movie)
-
-          }}/>
+          <Route path="/play/:movie" element={<Play/>}/>
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>

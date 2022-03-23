@@ -3,11 +3,17 @@ import logo from "../../assets/logo.png"
 import home from "../../assets/home.png"
 import pesquisa from "../../assets/pesquisa.png"
 import './style.scss'
-import axios from "axios";
+import {axios} from "../../axios/api.jsx"
 import { useEffect, useState } from "react";
 import { List } from "./List";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+    const f = useNavigate()
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(!token) f('/login');
+  })
 
     async function kk(cate, id) {
         const ct = await axios.get(`https://apitypescript.cleyssondias.repl.co/movie/category/${id}`)
