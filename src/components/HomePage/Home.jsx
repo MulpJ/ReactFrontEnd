@@ -30,7 +30,7 @@ export function HomePage() {
             <Link className="lon"to="/login">Entrar</Link>
              <img className="loo" src={logo}></img><p className="nome">MulpJ</p>
              <h1>Melhor Plataforma de Filmes e series</h1>
-                <Link className="se" to="/cadastro" >Cadastre-se Agora</Link>   
+                <Link className="se" to="/register" >Cadastre-se Agora</Link>   
         </header>
       <SwiperSlide>
           <img className='background' src={rick}/>
