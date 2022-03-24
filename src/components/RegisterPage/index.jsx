@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {axios} from "../../axios/api.jsx"
+import { axios } from "../../axios/api.jsx"
 import { Link } from "react-router-dom";
 import './style.scss'
 import { useNavigate } from 'react-router-dom';
@@ -72,30 +72,30 @@ export function RegisterPage() {
     });
 
     if (response.data.error){
+      res.classList.remove('sucess')
       res.classList.add('error')
       res.classList.add('play')
       res.innerHTML = response.data.error
     }
-
+    
     else if (!response.data.error) {
-      
+      res.classList.remove('error')
       res.classList.add('sucess')
       res.classList.add('play')
       res.innerHTML = "Cadastrado com sucesso, redirecionando..."
       setTimeout(() => { window.location = '/login' }, 3000);
     }
-  }
-  }
 
 
-  window.addEventListener("load", () => {
-    document.getElementById('form').addEventListener('submit', api)
-  })
+  }
+  }
   
 
   useEffect(() => {
     const token = localStorage.getItem('token')
     if(token) n('/home');
+
+    document.getElementById('form').addEventListener('submit', api)
   })
 
   return (

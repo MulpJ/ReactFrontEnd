@@ -1,10 +1,10 @@
 {
-  "name": "my-vue-app",
+  "name": "mulpj",
   "version": "1.0.0",
   "scripts": {
-    "start": "vite --host",
+    "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "axios": "^0.26.1",

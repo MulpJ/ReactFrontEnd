@@ -12,18 +12,7 @@ export function LoginPage() {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if(token) n('/home');
-  })
 
-  function showpass() {
-    const pass = document.getElementById("password");
-    if (pass.type == "password") {
-      pass.type = "text";
-    } else {
-      pass.type = "password";
-    }
-  }
-
-  window.addEventListener("load", () => {
     document.getElementById("form").addEventListener("submit", async(evt) => {
       evt.preventDefault();
       
@@ -47,15 +36,21 @@ export function LoginPage() {
         res.classList.add("sucess");
         res.classList.add("play");
         res.innerHTML = "Redirecionando....";
-
-        localStorage.setItem("nome", response.data.user.name);
-        localStorage.setItem("plano", response.data.user.plan);
         localStorage.setItem("token", response.data.token);
-        localStorage.setItem("money", response.data.user.money);
         window.location = "/home";
       }
     });
-  });
+  })
+
+  function showpass() {
+    const pass = document.getElementById("password");
+    if (pass.type == "password") {
+      pass.type = "text";
+    } else {
+      pass.type = "password";
+    }
+  }
+
 
   return (
     <div className="MainContainer">

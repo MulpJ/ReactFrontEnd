@@ -1,13 +1,17 @@
 import {axios} from "../../axios/api.jsx"
-import react from "react"
-import { useParams} from "react-router-dom"
+import react, { useEffect } from "react"
+import { useParams, useNavigate} from "react-router-dom"
 import { useState } from "react"
 import './style.scss'
 
 
 export  function Play(){
     const verif = useParams()
-    window.addEventListener("load",async () => {
+    const f = useNavigate()
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+      if (!token) return f("/login");
+
     const inner = document.querySelector(".mainPlay")
 
       axios.get('https://danestourado.com/api/google-drive-api-open/api.php').then((res) =>{

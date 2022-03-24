@@ -1,0 +1,1 @@
+on: yarn dev

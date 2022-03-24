@@ -2,7 +2,7 @@
     display:flex;
       overflow-x: scroll;
       margin-bottom: 40px;
-      
+     
       &::-webkit-scrollbar {
         background-color: rgb(48, 48, 48,0.2);
         border-radius: 40px;
@@ -19,12 +19,15 @@
     a{
    
         img {
-         
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.651);
            border-radius: 30px;
-           width: 15vw;
+           width: 11vw;
            margin: 3px;
-        
-        
+           transition: 1s;
+           &:hover{
+             transition: 0.5s;
+             box-shadow: 0px 0px 20px white;
+           }
         }
       
     }

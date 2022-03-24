@@ -8,16 +8,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  
-  
+  background-color: rgba(34, 34, 34, 0.76);
+
   .head {
-    
     width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     // TODOS OS INPUTS
     .g {
       z-index: 1;
@@ -25,13 +23,13 @@ body {
     }
 
     .uu {
-        
       width: 14%;
     }
 
     .oo {
-      width: 13%;
+      width: 10%;
       cursor: pointer;
+      margin-right: 20px;
     }
 
     .pp {
@@ -41,27 +39,43 @@ body {
     // -------------------
 
     .search {
-        border: none ;
-        border-radius: 7px;
-        height: 4vh;
-        text-align: center;
-        box-shadow: 0px 0px 20px white;
+      border: none;
+      border-radius: 7px ;
+      height: 4vh;
+      text-align: center;
+      box-shadow: 0px 0px 20px white;
     }
     .sear {
-        transition: 1s;
-        display: none;
+      transition: 1s;
+      display: none;
     }
   }
-  .corp{
-    width: 80%;
-      .view{
-        
+  .corp {
+    width: 90%;
+    .view {
+      div {
+        background-color: rgba(0, 0, 0, 0.233);
+        box-shadow: 0px 0px 20px rgba(59, 59, 59, 0.24);
+        border-radius: 15px;
+        padding: 15px;
+        margin-bottom: 10px;
         h2 {
-            color: white;
-            font-size: 1.5em;
+          color: white;
+          font-size: 1.0em;
+          text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.829);
+          margin: 10px 2%;
         }
-        
-        }
-          
       }
+    }
   }
+}
+.hi {
+  display: none;
+}
+#busc2 {
+  border: none;
+  background-color: white;
+   box-shadow: 0px 0px 20px white;
+   padding: 5px;
+   border-radius: 7px ;
+}
