@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "engines": {
-    "node": "dev"
-  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
