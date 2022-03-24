@@ -1,4 +1,4 @@
-import app from './App.scss'
+import './App.scss'
 import React from 'react'
 import { Rotas } from './Rotas/Rotas'
 

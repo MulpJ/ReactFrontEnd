@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": "^17.0.2"
+    "node": "dev"
   },
   "scripts": {
     "dev": "vite --host",
