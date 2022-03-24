@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build": "vite build",
+    "server": "vite preview"
   },
   "dependencies": {
     "axios": "^0.26.1",
