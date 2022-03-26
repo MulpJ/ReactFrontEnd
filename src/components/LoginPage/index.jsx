@@ -37,7 +37,7 @@ export function LoginPage() {
         res.classList.add("play");
         res.innerHTML = "Redirecionando....";
         localStorage.setItem("token", response.data.token);
-        window.location = "/home";
+        n('/home')
       }
     });
   })

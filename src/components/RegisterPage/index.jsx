@@ -83,7 +83,7 @@ export function RegisterPage() {
       res.classList.add('sucess')
       res.classList.add('play')
       res.innerHTML = "Cadastrado com sucesso, redirecionando..."
-      setTimeout(() => { window.location = '/login' }, 3000);
+      setTimeout(() => { n('/login'); }, 3000);
     }
 
 
