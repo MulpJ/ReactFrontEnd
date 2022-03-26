@@ -1,11 +1,10 @@
 {
-  "name": "mulpjfront",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "mulpj",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
