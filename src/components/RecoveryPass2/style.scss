@@ -45,7 +45,6 @@
         width: 100%;
         border-radius: 15px;
         margin-top: 10px;
-        margin-bottom: 10px;
         border: none;
         font-weight: 500;
         font-size: 1.2em;
@@ -86,4 +85,18 @@
   100% {
     left: 3%;
   }
+}
+
+.showpass {
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    top: 53%;
+    left: 85%;
+    width: 20px;
+  }
+
+
 }

@@ -80,7 +80,7 @@ export function LoginPage() {
               <p>
                 <Link to="/register">Não tem Cadastro?</Link>
               </p>
-              <p>Esqueci a senha!</p>
+              <p><Link to="/recovery">Esqueci a senha!</Link></p>
             </div>
           </form>
         </div>
