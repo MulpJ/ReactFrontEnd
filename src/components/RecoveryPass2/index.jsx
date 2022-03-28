@@ -3,6 +3,8 @@ import iconShow from "../../assets/iconShow.png";
 import {useParams, useNavigate} from 'react-router-dom'
 import {axios} from "../../axios/api.jsx"
 import './style.scss'
+import { Link } from 'react-router-dom';
+import seta  from '../../assets/seta.png'
 
 
 // apos o usuario acessar o link de recuperaçoa de senha q foi para o email dele pela outra tela
@@ -87,6 +89,9 @@ export function RecoveryPass2() {
     <div className="RecoveyMain">
       <div id="res">
 
+      </div>
+      <div className="return">
+      <Link to='/login'><img src={seta} /></Link>
       </div>
       <div className="RecoveyBox">
         <h1>Recuperar senha</h1>

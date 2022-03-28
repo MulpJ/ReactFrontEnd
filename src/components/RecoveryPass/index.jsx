@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import {axios} from "../../axios/api.jsx"
 import {useNavigate} from 'react-router-dom'
 import './style.scss'
+import seta  from '../../assets/seta.png'
+import { Link } from 'react-router-dom'
 
 
 // pagina recuperação de senha
@@ -31,6 +33,9 @@ export function RecoveryPass() {
     <div className="RecoveyMain">
       <div id="res">
 
+      </div>
+      <div className="return">
+      <Link to='/login'><img src={seta} /></Link>
       </div>
       <div className="RecoveyBox">
         <h1>Recuperar senha</h1>
