@@ -6,8 +6,15 @@
     height: 100vh;
     margin: 0;
     overflow-y: hidden;
+    .seta {
+        z-index: 1;
+        position: absolute;
+        top: 3%;
+        left: 2%;
+    }  
     iframe {
-        width: 100vw;
-        height: 100vh;
+        width: 70vw;
+        height: 80vh;
+        border: none;
     }
 }
