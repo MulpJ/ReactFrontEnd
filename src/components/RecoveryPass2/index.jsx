@@ -4,6 +4,9 @@ import {useParams, useNavigate} from 'react-router-dom'
 import {axios} from "../../axios/api.jsx"
 import './style.scss'
 
+
+// apos o usuario acessar o link de recuperaçoa de senha q foi para o email dele pela outra tela
+// ele vem para essa tela que vai de fato trocar a senha do mesmo para uma senha nova.
 export function RecoveryPass2() {
   const parms = useParams()
   const n = useNavigate()

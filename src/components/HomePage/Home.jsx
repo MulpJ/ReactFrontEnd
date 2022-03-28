@@ -14,6 +14,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+
+// aqui estamos utilizando um biblioteca chamada swiper para fazer o carrosseul com as imgens na pagina principal
 export function HomePage() {
 
   return (

@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logoForRegister.png'
 import iconShow from '../../assets/iconShow.png'
 
+
+// pagina de registro
 export function RegisterPage() {
   const n = useNavigate()
+  //showpass e para mostrar e esconder a senha
   function showpass() {
     const pass = document.getElementById('password')
     if(pass.type == 'password') {
@@ -25,7 +28,7 @@ export function RegisterPage() {
       pass.type = 'password';
     }
   }
-
+  // aqui vai pegar as informaçoes do usuario e tratar erros 
   async function api(evt) {
     evt.preventDefault();
     const res = document.getElementById('res')
@@ -51,7 +54,7 @@ export function RegisterPage() {
     })
 
    
-
+    // verificando se a primeira senha e compativel com a segunda
     if (senha != senhaV) {
       res.classList.add('error')
       res.classList.add('play')
@@ -61,16 +64,18 @@ export function RegisterPage() {
       res.classList.add('play')
       res.innerHTML = 'Senha inferior a 8 digitos, ou existem espaços'
     } else {
-
+    
+      // definindo a url da api q vai ser consumida para efetuar o cadastro
     let api = `https://apitypescript.cleyssondias.repl.co/user`
 
+    // aqui esta jogando as informações no banco de dados que foram pegar la em cima
     const response = await axios.post(api, {
       name: `${name}`,
       email: `${email}`,
       password: `${senha}`,
       plan:"Free"
     });
-
+    // tratamento de erros 
     if (response.data.error){
       res.classList.remove('sucess')
       res.classList.add('error')
@@ -97,7 +102,7 @@ export function RegisterPage() {
 
     document.getElementById('form').addEventListener('submit', api)
   })
-
+// estrutura HTML
   return (
     
     <div className="ResContainer">

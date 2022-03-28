@@ -2,26 +2,31 @@ import react from "react";
 import { axios } from "../../axios/api.jsx";
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+// aqui importamos a lista que foi feita para pegar as categorias e deixar em um padrão
 import { List } from "./List";
 import "./style.scss";
 import logo from "../../assets/logo.png";
 import home from "../../assets/Logout.png";
 import pesquisa from "../../assets/pesquisa.png";
 
+
+// aqui é a tela de home que se localiza os filmes
 export function Home() {
     const f = useNavigate();
     const [popu, setPopu] = useState([])
     const [c, setc] = useState(1)
     const [cate, setCategory] = useState([])
+    // aqui estamos usando a lista e dando o id que que fica na api para ela trazer as categorias pedidas
     const list = [{"id":28,"name":"Ação"},{"id":12,"name":"Aventura"},{"id":16,"name":"Animação"},{"id":35,"name":"Comédia"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentário"},{"id":18,"name":"Drama"},{"id":10751,"name":"Família"},{"id":14,"name":"Fantasia"}]
 
+    // essa funçao tras os filmes mais populares
     async function useFilm(set) {
         const res = await axios.get(
             "https://apitypescript.cleyssondias.repl.co/movie/popu"
         );
         set(res.data.results)
     }
-
+    // aqui estamos verificando se o usario tem o token para poder permanecer logado
     useEffect(() => {
       const token = localStorage.getItem("token");
       if (!token) return f("/login");
@@ -30,13 +35,14 @@ export function Home() {
       
       
     });
-
+    // aqui é a funçao de pesquisar os filmes 
     function busc() {
       const t = document.getElementById('titulo')
       const out = document.getElementById('out')
       const main = document.getElementById('mainse')
       main.classList.remove('hi')
       const value = document.getElementById('busc').value
+      // ele busca nessa url usando o value que o usuario botar
       const url = `https://api.themoviedb.org/3/search/movie?api_key=c52691093e2b3765ee3464ab26941ed3&language=pt-br&query=${value}`
       fetch(url).then(res => res.json()).then(data => {
           t.innerHTML = "<p>Resultados</p>"
@@ -49,12 +55,12 @@ export function Home() {
            })
        })
   }
-
+// função para deslogar removendo o token do usuario
   function leave() {
     localStorage.removeItem('token')
   }
 
-    
+  // aqui é a funçao que é usado para esconder e aparecer a barra de pesquisa  
   function src() {
       const kkk = document.getElementById('mainse')
       const busc = document.querySelector("#busc");
@@ -70,6 +76,7 @@ export function Home() {
           setc(1);
       }
   }
+  // estrutura HTML
   return (
     <div className="top">
       <header className="head">

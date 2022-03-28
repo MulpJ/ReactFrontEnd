@@ -6,8 +6,10 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-export function LoginPage() {
 
+// pagina de login
+export function LoginPage() {
+// redirecionamento do usuario e verificando sua token
   const n = useNavigate()
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -16,18 +18,17 @@ export function LoginPage() {
     document.getElementById("form").addEventListener("submit", async(evt) => {
       evt.preventDefault();
       
-      
+      // pegando as informções que o usuario colocar 
       const email = document.getElementById("email").value;
       const senha = document.getElementById("password").value;
       const res = document.getElementById("res");
 
       res.classList.remove("play");
       res.innerHTML = "";
-
+      // levando as informações para o backend
       let api = `https://apitypescript.cleyssondias.repl.co/User/${email}/${senha}`;
-
       const response = await axios.get(api);
-
+      // fazendo o tratamento das informações para verificar se o usuario existe
       if (response.data.error) {
         res.classList.add("error");
         res.classList.add("play");
@@ -41,7 +42,7 @@ export function LoginPage() {
       }
     });
   })
-
+  // função para mostrar e esconder a senha
   function showpass() {
     const pass = document.getElementById("password");
     if (pass.type == "password") {
@@ -51,7 +52,7 @@ export function LoginPage() {
     }
   }
 
-
+  // estrutura HTML
   return (
     <div className="MainContainer">
       <div id="res">dasd</div>

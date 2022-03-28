@@ -10,6 +10,7 @@ import { HomePage } from '../components/HomePage/Home.jsx'
 import { Home } from '../components/Home'
 import { Play } from '../components/Play';
 
+// todas as rotas 
 export function Rotas() {
     return (
       <BrowserRouter>

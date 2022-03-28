@@ -1,6 +1,8 @@
 import './style.scss'
 import React from 'react'
 
+
+// aqui caso o usuario tentar acessar uma pagina nao existente aparecerar essa pagina 
 export function NotFound() {
     return (
       <div className="notFoundContainer">

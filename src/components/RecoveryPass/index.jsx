@@ -3,12 +3,16 @@ import {axios} from "../../axios/api.jsx"
 import {useNavigate} from 'react-router-dom'
 import './style.scss'
 
+
+// pagina recuperação de senha
 export function RecoveryPass() {
   const n = useNavigate()
+  // token padrao
   useEffect(() => {
     const token = localStorage.getItem('token')
     if(token) n('/home');
   })
+  // funçap para enviar o email de recuperaçao de senha para o usuario 
  async function go(evt) {
     evt.preventDefault();
     const res = document.getElementById('res')
@@ -22,7 +26,7 @@ export function RecoveryPass() {
     res.innerHTML = "Um email de troca de senha foi enviado, para sua caixa de entrada!";
   }
 
-
+// estrutura HTML
   return (
     <div className="RecoveyMain">
       <div id="res">
