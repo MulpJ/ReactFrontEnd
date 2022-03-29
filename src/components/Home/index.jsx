@@ -8,7 +8,13 @@ import "./style.scss";
 import logo from "../../assets/logo.png";
 import home from "../../assets/Logout.png";
 import pesquisa from "../../assets/pesquisa.png";
-
+import { Header } from './Header'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 // aqui é a tela de home que se localiza os filmes
 export function Home() {
     const f = useNavigate();
@@ -77,6 +83,7 @@ export function Home() {
   }
   // estrutura HTML
   return (
+    
     <div className="top">
       <header className="head">
         <img className="oo g" onClick={leave} alt="Home Page" src={home} />
@@ -86,6 +93,27 @@ export function Home() {
         <img className="pp g" alt="Pesquisa" onClick={src} src={pesquisa} />
       </header>
       <main className="corp">
+
+      <div className="headerr">
+        <Swiper
+          // install Swiper modules
+          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={0}
+          slidesPerView={1}
+          autoplay={{delay: 2000}}
+        >
+          {popu.map((filme) => {
+            
+            return (
+              
+              <SwiperSlide>
+                <Header title={filme.title} desc={filme.overview.substring(0,200)+'...'} img={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}/>
+              </SwiperSlide>
+            )
+          })} 
+        </Swiper>
+      </div>
+
         <div className="view">
 
         <div id="mainse" className="hi">
@@ -93,7 +121,10 @@ export function Home() {
             <div id="out" className="most">
                
             </div>
-        </div> 
+        </div>
+
+        
+
         <div>
           
             <h2>Populares MulpJ</h2>
@@ -115,5 +146,6 @@ export function Home() {
         </div>
       </main>
     </div>
+
   );
 }

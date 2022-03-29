@@ -2,6 +2,8 @@ body {
   overflow-x: hidden;
 }
 
+
+
 .top {
   width: 100vw;
   display: flex;
@@ -12,10 +14,17 @@ body {
  
 
   .head {
-    width: 30%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    top: 0;
+    
+    
+    background-color: rgba(0, 0, 0, 0.521);
 
     // TODOS OS INPUTS
     .g {
@@ -24,17 +33,17 @@ body {
     }
 
     .uu {
-      width: 14%;
+      width: 3%;
     }
 
     .oo {
-      width: 10%;
+      width: 2%;
       cursor: pointer;
       margin-right: 20px;
     }
 
     .pp {
-      width: 16%;
+      width: 2.9%;
       cursor: pointer;
     }
     // -------------------
@@ -80,3 +89,4 @@ body {
    padding: 5px;
    border-radius: 7px ;
 }
+
