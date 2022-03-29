@@ -31,7 +31,7 @@ export function Home() {
       if (!token) return f("/login");
         
       useFilm(setPopu)
-      
+  
       
     });
     // aqui é a funçao de pesquisar os filmes 
@@ -75,16 +75,10 @@ export function Home() {
           setc(1);
       }
   }
-  const nome = localStorage.getItem('nome')
-   let n = nome.split(" ")
-   let b = n[0]
   // estrutura HTML
   return (
     <div className="top">
       <header className="head">
-        <div className="lo">
-          <h2>!! Bem vindo {b}</h2>
-        </div>
         <img className="oo g" onClick={leave} alt="Home Page" src={home} />
         <img className="uu g" src={logo} />
         <input className="search sear" type="text"  id="busc" />
