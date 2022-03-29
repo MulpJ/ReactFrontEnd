@@ -9,7 +9,6 @@ import logo from "../../assets/logo.png";
 import home from "../../assets/Logout.png";
 import pesquisa from "../../assets/pesquisa.png";
 
-
 // aqui é a tela de home que se localiza os filmes
 export function Home() {
     const f = useNavigate();
@@ -76,10 +75,16 @@ export function Home() {
           setc(1);
       }
   }
+  const nome = localStorage.getItem('nome')
+   let n = nome.split(" ")
+   let b = n[0]
   // estrutura HTML
   return (
     <div className="top">
       <header className="head">
+        <div className="lo">
+          <h2>!! Bem vindo {b}</h2>
+        </div>
         <img className="oo g" onClick={leave} alt="Home Page" src={home} />
         <img className="uu g" src={logo} />
         <input className="search sear" type="text"  id="busc" />
@@ -95,8 +100,8 @@ export function Home() {
                
             </div>
         </div> 
-
         <div>
+          
             <h2>Populares MulpJ</h2>
             <div className="most">
                 {popu.map((filme) => {
